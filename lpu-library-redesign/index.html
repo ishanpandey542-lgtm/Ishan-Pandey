@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d1b32">
+  <title>IIT Dholakpur Central Library | Premier University Knowledge Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/books.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body class="landing-page">
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="assets/iit-dholakpur-logo.png" alt="IIT Dholakpur logo">
+      <span>IIT Dholakpur <b>Library</b></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html" class="active-link">Home</a>
+      <a href="books.html">Library Catalogue</a>
+      <a href="#about-library">About Library</a>
+      <a href="#features">Features</a>
+      <button id="myReservationsNav" class="nav-link" type="button">My Reservations</button>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="account-actions">
+      <span id="userGreeting" class="user-greeting"></span>
+      <button class="btn btn-outline" id="loginOpen" type="button">Login</button>
+      <button class="btn btn-gold" id="signupOpen" type="button">Sign Up</button>
+      <button class="btn btn-outline hidden" id="logoutBtn" type="button" onclick="setTimeout(function(){ window.location.href='index.html'; }, 350);">Log out</button>
+    </div>
+
+    <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation" type="button">☰</button>
+  </header>
+
+  <main id="home">
+    <section class="hero cinema-hero">
+      <div class="hero-shade"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> CENTRAL UNIVERSITY LIBRARY · EST. ACADEMIC EXCELLENCE</p>
+        <h1>A Sanctuary of Scholarship at <em>IIT Dholakpur Library</em></h1>
+        <p class="hero-copy">
+          Explore curated academic monographs, engineering reference volumes, and digital-ready 24-hour book reservations designed for researchers, faculty, and students.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="books.html" class="btn btn-gold btn-hero-primary">VISIT THE LIBRARY →</a>
+          <a href="#about-library" class="btn btn-outline-gold btn-hero-secondary">EXPLORE</a>
+        </div>
+      </div>
+
+      <div class="hero-note">
+        <span>✦</span>
+        Open 8:00 AM – 10:00 PM Daily · Instant 24-Hour Book Holds
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong>50,000+</strong><span>Curated Volumes</span></div>
+      <div><strong>10,000+</strong><span>Active Scholars</span></div>
+      <div><strong>8 AM – 10 PM</strong><span>Reading Room Hours</span></div>
+      <div><strong>24 Hours</strong><span>Hold Window</span></div>
+    </section>
+
+    <section class="intro-section" id="about-library">
+      <div class="intro-grid">
+        <div class="intro-copy">
+          <p class="eyebrow dark"><span></span> ABOUT THE UNIVERSITY LIBRARY</p>
+          <h2>Where Timeless Volumes Meet Modern Academic Inquiry</h2>
+          <p>
+            The IIT Dholakpur Central Library serves as the intellectual heart of campus life—bringing together foundational engineering texts, research references, management classics, and quiet study spaces under one roof.
+          </p>
+          <p>
+            Whether you are preparing for coursework, writing a thesis, or browsing across departments, our online reservation desk lets you hold available titles seamlessly before visiting the shelves.
+          </p>
+          <div class="intro-actions">
+            <a href="books.html" class="btn btn-gold">VISIT THE LIBRARY →</a>
+            <a href="#features" class="btn btn-navy">VIEW CAPABILITIES</a>
+          </div>
+        </div>
+
+        <div class="intro-panel">
+          <div class="intro-card-highlight">
+            <span class="gold-badge">CAMPUS PRIVILEGE</span>
+            <h3>24-Hour Priority Hold</h3>
+            <p>Reserve available books online in seconds and collect them at your convenience within 24 hours.</p>
+          </div>
+          <ul class="intro-checklist">
+            <li><span>✦</span> 5 academic departments: Computer Science, Mechanical, Electronics, Civil &amp; Management</li>
+            <li><span>✦</span> Searchable by title, author, category, and ISBN</li>
+            <li><span>✦</span> Live reservation countdown &amp; one-click cancellation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-section" id="features">
+      <div class="section-heading centered">
+        <div>
+          <p class="eyebrow dark"><span></span> LIBRARY HIGHLIGHTS</p>
+          <h2>Crafted for Focused Study &amp; Effortless Discovery</h2>
+          <p class="section-subtext">Everything you need to locate, reserve, and manage your academic reading.</p>
+        </div>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon">⌕</div>
+          <h3>Precision Catalogue Search</h3>
+          <p>Filter books across departments or search directly by book title, author name, category, or ISBN in the full catalogue.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">◷</div>
+          <h3>24-Hour Smart Reservations</h3>
+          <p>Place a hold on available titles with real-time copy tracking and automatic expiry reminders after 24 hours.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">▤</div>
+          <h3>Personal Hold Dashboard</h3>
+          <p>Track active reservations, view remaining pickup time, and manage or cancel holds anytime from your account.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">✦</div>
+          <h3>Cross-Disciplinary Shelves</h3>
+          <p>Access core textbooks and reference guides across Computer Science, Mechanical, Electronics, Civil, and Management.</p>
+        </article>
+      </div>
+
+      <div class="cta-banner">
+        <div>
+          <h3>Ready to browse the complete collection?</h3>
+          <p>Head to the dedicated library catalogue to search titles, filter departments, and reserve books.</p>
+        </div>
+        <a href="books.html" class="btn btn-gold">VISIT THE LIBRARY →</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="hidden" aria-hidden="true">
+    <form id="searchForm"><input id="searchInput" type="search"></form>
+    <button type="button" class="search-tab active" data-search="title">Title</button>
+    <button type="button" id="advancedSearch">Advanced</button>
+    <div id="departmentFilters"></div>
+    <span id="resultCount"></span>
+    <div id="bookList"></div>
+    <button type="button" id="myReservationsSide">Reservations</button>
+  </div>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand-col">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="assets/iit-dholakpur-logo.png" alt="IIT Dholakpur logo">
+          <span>IIT Dholakpur <b>Library</b></span>
+        </a>
+        <p class="footer-desc">
+          The Central Library of IIT Dholakpur empowers students and scholars with structured academic resources, seamless online book reservations, and a serene environment for lifelong learning.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Visit the Library (Catalogue)</a></li>
+          <li><a href="#about-library">About the Library</a></li>
+          <li><a href="#features">Library Features</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Library Information &amp; Contact</h4>
+        <ul class="footer-meta">
+          <li><strong>Hours:</strong> Mon–Sun, 8:00 AM – 10:00 PM</li>
+          <li><strong>Reservation Hold:</strong> Active for 24 Hours</li>
+          <li><strong>Campus Desk:</strong> Central Library Block, IIT Dholakpur</li>
+          <li><strong>Email:</strong> library@iitdholakpur.ac.in</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Developed as part of the <strong>CSE 326</strong> University Web Development Project · IIT Dholakpur</p>
+      <small>© 2026 IIT Dholakpur Library. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="authModal" aria-hidden="true">
+    <section class="modal auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button class="modal-close" data-close="authModal" aria-label="Close">×</button>
+      <img class="modal-icon" src="assets/iit-dholakpur-logo.png" alt="IIT Dholakpur logo">
+      <p class="eyebrow dark">WELCOME TO IIT DHOLAKPUR LIBRARY</p>
+      <h2 id="authTitle">Welcome back</h2>
+      <p class="modal-subtitle" id="authSubtitle">Log in to reserve your favourite books.</p>
+
+      <div class="auth-switch">
+        <button class="active" id="loginTab" type="button">Login</button>
+        <button id="signupTab" type="button">Create account</button>
+      </div>
+
+      <form id="authForm">
+        <label id="nameLabel" class="hidden">
+          Full name
+          <input id="authName" autocomplete="name" placeholder="Your full name">
+        </label>
+
+        <label>
+          Email address
+          <input id="authEmail" type="email" required autocomplete="email" placeholder="name@iitdholakpur.ac.in">
+        </label>
+
+        <label>
+          Password
+          <input id="authPassword" type="password" required minlength="4" autocomplete="current-password" placeholder="Enter your password">
+        </label>
+
+        <button class="btn btn-gold full-btn" type="submit" id="authSubmit">Login to your account →</button>
+      </form>
+
+      <p class="demo-note">Testing mode: the demo email and password are filled automatically. Either tab will log you in.</p>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="reservationModal" aria-hidden="true">
+    <section class="modal reservation-modal" role="dialog" aria-modal="true" aria-labelledby="reservationTitle">
+      <button class="modal-close" data-close="reservationModal" aria-label="Close">×</button>
+      <p class="eyebrow dark">YOUR LIBRARY ACCOUNT</p>
+      <h2 id="reservationTitle">My Reservations</h2>
+      <p class="modal-subtitle">Your reserved books and collection deadline.</p>
+      <div id="reservationList" class="reservation-list"></div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>

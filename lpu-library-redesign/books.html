@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d1b32">
+  <title>Library Catalogue | IIT Dholakpur Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/books.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body class="catalogue-page">
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="assets/iit-dholakpur-logo.png" alt="IIT Dholakpur logo">
+      <span>IIT Dholakpur <b>Library</b></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="books.html" class="active-link">Browse Books</a>
+      <button id="myReservationsNav" class="nav-link" type="button">My Reservations</button>
+      <a href="index.html#about-library">About Library</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="account-actions">
+      <span id="userGreeting" class="user-greeting"></span>
+      <button class="btn btn-outline" id="loginOpen" type="button">Login</button>
+      <button class="btn btn-gold" id="signupOpen" type="button">Sign Up</button>
+      <button class="btn btn-outline hidden" id="logoutBtn" type="button" onclick="setTimeout(function(){ window.location.href='index.html'; }, 350);">Log out</button>
+    </div>
+
+    <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation" type="button">☰</button>
+  </header>
+
+  <main>
+    <section class="hero catalogue-hero">
+      <div class="hero-shade"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> DIGITAL STACKS &amp; RESERVATIONS</p>
+        <h1>Explore the <em>IIT Dholakpur</em> Book Catalogue</h1>
+        <p class="hero-copy">Search by title, author, category, or ISBN—filter by academic department and reserve available copies for 24 hours.</p>
+
+        <form id="searchForm" class="search-panel">
+          <div class="search-tabs">
+            <button type="button" class="search-tab active" data-search="title">Book Name</button>
+            <button type="button" class="search-tab" data-search="author">Author</button>
+            <button type="button" class="search-tab" data-search="department">Category</button>
+            <button type="button" class="search-tab" data-search="isbn">ISBN</button>
+          </div>
+
+          <div class="search-input-row">
+            <input id="searchInput" type="search" placeholder="Enter book name..." aria-label="Search books">
+            <button class="btn btn-navy" type="submit">⌕ &nbsp;Search</button>
+          </div>
+
+          <button class="advanced-link" id="advancedSearch" type="button">Advanced Search ↗</button>
+        </form>
+      </div>
+
+      <div class="hero-note">
+        <span>✦</span>
+        <a href="index.html">← Return to Homepage</a>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong>50,000+</strong><span>Total Books</span></div>
+      <div><strong>10,000+</strong><span>Active Students</span></div>
+      <div><strong>8 AM - 10 PM</strong><span>Library Timings</span></div>
+      <div><strong>24/7</strong><span>Online Reservation</span></div>
+    </section>
+
+    <section class="content-layout" id="catalog">
+      <aside class="quick-card">
+        <h3>⚡ Quick Access</h3>
+        <a href="index.html">⌂ &nbsp;Back to Homepage</a>
+        <a href="#catalog">🔎 &nbsp;Search Books</a>
+        <button id="myReservationsSide" type="button">▤ &nbsp;My Reservations</button>
+        <a href="#rules">▤ &nbsp;Library Rules</a>
+        <a href="#contact">✉ &nbsp;Contact Us</a>
+
+        <div class="side-tip">
+          <span>✦</span>
+          <p><b>Find your next favourite.</b><br>Explore books across departments.</p>
+        </div>
+      </aside>
+
+      <section class="popular">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow dark"><span></span> UNIVERSITY COLLECTION</p>
+            <h2>Library Catalogue</h2>
+          </div>
+          <span id="resultCount" class="result-count"></span>
+        </div>
+
+        <div class="filter-row" id="departmentFilters">
+          <button class="filter-chip active" data-department="all" type="button">All Books</button>
+        </div>
+
+        <div class="book-grid" id="bookList"></div>
+      </section>
+
+      <aside class="notice-card">
+        <h3>📢 Library Notice</h3>
+        <p class="notice-highlight">✦ Book reservation is now available for all IIT Dholakpur students!</p>
+        <p>Reserve your books online and avoid the queue.</p>
+        <p>◷ Library Timing: 8 AM - 10 PM</p>
+        <a href="#rules" class="btn btn-navy btn-small">Read More →</a>
+      </aside>
+    </section>
+
+    <section class="how-section" id="about">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark"><span></span> SIMPLE &amp; CONVENIENT</p>
+          <h2>How It Works</h2>
+        </div>
+      </div>
+
+      <div class="steps">
+        <article>
+          <span>01</span>
+          <div>
+            <h3>🔎 Search</h3>
+            <p>Find your favourite book by name, author or category.</p>
+          </div>
+        </article>
+
+        <article>
+          <span>02</span>
+          <div>
+            <h3>▤ Reserve</h3>
+            <p>Log in and reserve your copy online for 24 hours.</p>
+          </div>
+        </article>
+
+        <article>
+          <span>03</span>
+          <div>
+            <h3>☑ Collect</h3>
+            <p>Visit the library and collect your reserved book.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="rules-strip" id="rules">
+      <b>📌 Reservation reminder</b>
+      <span>Each reservation remains active for 24 hours. Collect your book within this period.</span>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand-col">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="assets/iit-dholakpur-logo.png" alt="IIT Dholakpur logo">
+          <span>IIT Dholakpur <b>Library</b></span>
+        </a>
+        <p class="footer-desc">
+          Making knowledge accessible, one book at a time. Browse academic holdings and manage 24-hour campus reservations.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Homepage</a></li>
+          <li><a href="books.html">Library Catalogue</a></li>
+          <li><a href="#rules">Reservation Rules</a></li>
+          <li><a href="#contact">Contact Desk</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Library Information &amp; Contact</h4>
+        <ul class="footer-meta">
+          <li><strong>Timings:</strong> 8:00 AM – 10:00 PM</li>
+          <li><strong>Hold Period:</strong> 24 Hours</li>
+          <li><strong>Location:</strong> Central Library, IIT Dholakpur</li>
+          <li><strong>Email:</strong> library@iitdholakpur.ac.in</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>IIT Dholakpur Library · <strong>CSE 326</strong> Project Prototype</p>
+      <small>© 2026 IIT Dholakpur Library. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="authModal" aria-hidden="true">
+    <section class="modal auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button class="modal-close" data-close="authModal" aria-label="Close">×</button>
+      <img class="modal-icon" src="assets/iit-dholakpur-logo.png" alt="IIT Dholakpur logo">
+      <p class="eyebrow dark">WELCOME TO IIT DHOLAKPUR LIBRARY</p>
+      <h2 id="authTitle">Welcome back</h2>
+      <p class="modal-subtitle" id="authSubtitle">Log in to reserve your favourite books.</p>
+
+      <div class="auth-switch">
+        <button class="active" id="loginTab" type="button">Login</button>
+        <button id="signupTab" type="button">Create account</button>
+      </div>
+
+      <form id="authForm">
+        <label id="nameLabel" class="hidden">
+          Full name
+          <input id="authName" autocomplete="name" placeholder="Your full name">
+        </label>
+
+        <label>
+          Email address
+          <input id="authEmail" type="email" required autocomplete="email" placeholder="name@iitdholakpur.ac.in">
+        </label>
+
+        <label>
+          Password
+          <input id="authPassword" type="password" required minlength="4" autocomplete="current-password" placeholder="Enter your password">
+        </label>
+
+        <button class="btn btn-gold full-btn" type="submit" id="authSubmit">Login to your account →</button>
+      </form>
+
+      <p class="demo-note">Testing mode: the demo email and password are filled automatically. Either tab will log you in.</p>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="reservationModal" aria-hidden="true">
+    <section class="modal reservation-modal" role="dialog" aria-modal="true" aria-labelledby="reservationTitle">
+      <button class="modal-close" data-close="reservationModal" aria-label="Close">×</button>
+      <p class="eyebrow dark">YOUR LIBRARY ACCOUNT</p>
+      <h2 id="reservationTitle">My Reservations</h2>
+      <p class="modal-subtitle">Your reserved books and collection deadline.</p>
+      <div id="reservationList" class="reservation-list"></div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
